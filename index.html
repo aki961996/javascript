@@ -9,21 +9,14 @@
             width:100%;
         }
     </style>
+   
 </head>
-
-
-
-
-<div >
-    
-    <h1 id="home">This is H1 tag with id new_one.</h1>
-  
+<body>
+   
+<div>
+    <h1 id="home">Dom Manipulation</h1>
 </div>
-
-
-
 <!-- calculator table -->
-
 <table id="myCalc" align="center">
     <tbody>
         <tr>
@@ -63,102 +56,8 @@
             <td colspan="1"><input type="button" value="AC" onClick="clearFields()" class="w-100"></td>
         </tr>
     </tbody>
-</table>
+</table> 
 
-
-<script>
-    // dome manupulation
-//id class tag  manipulation
-// this is internal javascript body ulil write
-// document.getElementById('new_one').innerHTML='I am dom and this is manipulations';
-
-// document.getElementsByClassName('newOne')[0].innerHTML="javascript tricks";
-// document.getElementsByClassName('newOne')[1].innerHTML = "javascript tricks";
-
-// document.getElementsByTagName('h1')[0].innerHTML= 'Header';
-
-//css
-
-// sdocument.getElementById('home').innerHTML = 'Home' ;
-// document.getElementById('about').innerHTML = 'About';
-
-// document.getElementById('home').style.backgroundColor = 'darkblue';
-// document.getElementById('home').style.color = 'white';
-// document.getElementById('home').style.margin = '0';
-// document.getElementById('home').style.display = 'none';
-
-//  document.getElementById('home').style.display = 'block';
-
-   // document.getElementsByClassName('about')[0].innerHTML = 'About';
-
-//variables storin 
-//this is the contaner
-var demo = document.getElementById('home');
-demo.innerHTML = "Calculator";
-demo.style.backgroundColor ="orange";
-demo.style.margin ="0";
-demo.style.color = "white";
-demo.style.textAlign ="center";
-
-
-//logic start
- var a, b, c;
- var op=false;
-   
-var result = document.getElementById('result');
-var first = document.getElementById('first').value;
-var second = document.getElementById('second').value;
-const insertNum = () => {
-    if(op){
-         document.getElementById('second').value = document.getElementById('second').value + event.target.value;
-
-    }else{
-        
-        document.getElementById('first').value = document.getElementById('first').value + event.target.value;
- 
-    }
-   
-}
-const addOperand = () => {
- c = event.target.value;
-    op=true;
-}
-const calculate = () => {
-    var a =parseInt(document.getElementById('first').value);
-   var b= parseInt(document.getElementById('second').value);
-   
-    var result;
-   // console.log(typeof(a,b));
- // console.log(typeof(c));
-   // var result;
-   switch(c){
-    case "+":
-        result = a+b;
-        break;
-    case '-':
-        result = a - b;
-    break;
-    default:
-        console.log('default');
-   }
-  document.getElementById('result').innerHTML = "Result: " + result;
-  var res = document.getElementById('result');
-  res.style.color = 'green';
-  res.style.fontSize ='50px';
-    console.log("Result:", result);
- 
-}
-
-const clearFields = () => {
-    document.getElementById('first').value ='';
-    document.getElementById('second').value = '';
-    document.getElementById('result').innerHTML = '';
-    c='';
-
-    op = false;
-}
-
- </script>
-    
+<script type="text/javascript" src="script.js"></script>
 </body>
 </html>
